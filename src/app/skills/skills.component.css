@@ -1,10 +1,10 @@
 .skills-container {
-  width: 500px;
     gap: 30px;
     padding: 30px;
     padding-top: 30px;
-    
+    width: 300px; 
     margin: auto;
+    align-items: flex-start;
    
    
   }
@@ -14,9 +14,8 @@
     padding: 10px;
     background-color: #05121d;
     border-radius: 8px;
-    margin-top: 65px;
-    text-align: center;
-   
+    margin-top: 50px;
+  
     }
   
   .skills-category h2 {

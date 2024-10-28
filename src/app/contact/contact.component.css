@@ -1,14 +1,14 @@
 .contact-section {
     text-align: center;
-    padding-top: 30px;
-    margin: 50px auto; /* Center horizontally */
-    width: 400px; /* Reduce the width */
-    background-color: transparent;
+ 
+    margin: 10px auto; /* Center horizontally */
+    width: 300px; /* Reduce the width */
+    background-color:rgb(6, 11, 22);
     border-radius: 8px;
    
     color: whitesmoke;
     box-shadow: 0 4px 8px rgba(133, 6, 105, 0.1); /* Optional shadow for a nicer look */
-    padding: 20px; /* Adjust padding */
+    padding: 40px; /* Adjust padding */
   }
   
   form {

@@ -19,7 +19,7 @@ html, body, .main {
 .home-content {
     flex: 1;                         /* Fills remaining space */
     background-color: rgb(18, 26, 44); /* Content background color */
-    display: flex;
+ 
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -33,7 +33,7 @@ app-navbar {
 }
 
 router-outlet {
-    display: flex;
+  
     flex: 1;
     width: 100%;
     justify-content: center;

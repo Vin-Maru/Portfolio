@@ -70,13 +70,14 @@ export class NavbarComponent {
       ? {
           position: 'fixed',
           top: '-0.2', // Reduced top value for closer positioning
-          width: '100%',
-        
-          margins:'0',
+          width: '90%',
+          
+          margins:'40px',
           backgroundColor: '#22203780',
           boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
           height: 'auto',
           padding: '20px',
+          
           transition: 'all 0.9s ease-in-out' // Added transition for smooth appearance
         }
       : {

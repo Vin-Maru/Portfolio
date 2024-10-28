@@ -1,19 +1,16 @@
 nav {
-  border-radius: 20px;
-  margin-top: -5px;
+  border-radius: 5px;
+  margin:0.5%;
+  background-color: rgb(7, 7, 34); /* Main background color */
+
   align-items: end;
   display: flex;
  flex-direction: column;
   align-items: right; /* Align items vertically in the center */
   position: absolute;
-  padding:40px; /* Padding applied on all sides */
+  padding:20px; /* Padding applied on all sides */
 }
-img{
-  width: 60px;
-  height: 60px;
-  border-radius: 20px;
-  align-self: left;
-}
+
 
 .navbar-header {
   display: flex;

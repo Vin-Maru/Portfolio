@@ -1,12 +1,5 @@
 /* Ensure the dashboard takes the full viewport height and width */
 /* Ensure the dashboard takes the full viewport height and width */
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden; /* Prevent horizontal scroll */
-}
 
 .dashboard {
   background-color: rgb(18, 26, 44);
@@ -15,7 +8,7 @@ html, body {
   flex-direction: column; /* Ensure children are stacked vertically */
   padding: 20px 40px; /* Adjust padding for smaller space */
   box-sizing: border-box; /* Include padding in width/height */
-  margin-top: 20px; /* Optional: Adjust as necessary */
+  margin-top: auto; /* Optional: Adjust as necessary */
   /* Consider adding a responsive max-width */
   max-width: 1200px; /* Set a max width if necessary */
   margin: 30px auto; /* Center horizontally if using max-width */
@@ -57,7 +50,7 @@ html, body {
 
 
 .about-me {
- margin-top: 80px;
+ margin-top: 30px;
   max-width: 800px; /* Limit the width for better readability */
 }
 h3{

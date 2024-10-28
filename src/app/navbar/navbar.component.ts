@@ -72,7 +72,7 @@ export class NavbarComponent {
           top: '-0.2', // Reduced top value for closer positioning
           width: '100%',
         
-          margins:'30px',
+          margins:'0',
           backgroundColor: '#22203780',
           boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
           height: 'auto',

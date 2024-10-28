@@ -1,31 +1,23 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden; /* Prevent horizontal scroll */
-}
-
-.main {
-    background-color: rgb(7, 7, 34);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 100%;
-}
-
-.home-content {
-    background-color: rgb(18, 26, 44);
-    flex: 1;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-    padding: 0;  /* Reset padding instead of negative margin */
-}
-
+/* Ensure the entire window is filled without extra space */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.home-content {
+    background-color: rgb(18, 26, 44); /* Content background color */
+    min-height: 100vh;                 /* Fills the viewport height */
+  padding: auto;
+  margin: -8px;
+    width: 100vw;                      /* Full width */
+    overflow: hidden;  
+    overflow-y: hidden; /* Prevents vertical scroll on body */
+    /* Prevents any overflow */
 }

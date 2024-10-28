@@ -101,44 +101,60 @@ p {
   margin-bottom: 15px; /* Space below paragraphs */
 }
 .skills-section {
-  padding-top: 80px;
-  margin-right: auto;
-  max-width: 800px; 
-}
-
-.skills-section h1 {
-  display: flex;
-  align-items: center;
+  text-align: center;
   color: whitesmoke;
-  
 }
 
+.divider {
+  width: 50px;
+  height: 2px;
+  background-color: #b9b9c5;
+  margin: 10px auto;
+  border: none;
+}
 
 .skills-container {
-  color:#f0e6e6;;
-  font-size: 18px;
-  align-self: center;
   display: flex;
-  margin: auto; 
-  margin-left: auto;
-display: flex;
-  gap: 5px;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .skills-category {
-  color:#b9b9c5 ;
-margin: 30px;
+  padding: 15px;
+  background-color: #05121d;
+  border-radius: 8px;
+}
 
+.skills-category h2 {
+  margin-bottom: 10px;
+  color: whitesmoke;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  color: #b9b9c5;
 }
 
 .stars {
   color: gold;
-  font-size: 14px;
-  margin-left: 5px;
+  font-weight: bold;
 }
+
+/* Responsive adjustments for larger screens */
+@media (min-width: 768px) {
+  .skills-container {
+      flex-direction: row;
+      gap: 30px;
+  }
+}
+
 .experience-section {
   max-width: 800px;
-  margin-top:  80px;
+  margin-top:  40px;
   margin-left: 100px;
   color: #f0e6e6;
 }

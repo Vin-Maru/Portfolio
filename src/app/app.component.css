@@ -1,23 +1,43 @@
-/* Ensure the entire window is filled without extra space */
+/* Reset default padding and margin */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html, body {
+html, body, .main {
     height: 100%;
-    margin: 0;
-    padding: 0;
+    overflow-x: hidden; /* Prevents horizontal scroll */
+}
+
+.main {
+    display: flex;
+    margin: -8px;
+    flex-direction: column;
+    min-height: 100vh;   /* Ensures it fills the entire viewport height */
 }
 
 .home-content {
+    flex: 1;                         /* Fills remaining space */
     background-color: rgb(18, 26, 44); /* Content background color */
-    min-height: 100vh;                 /* Fills the viewport height */
-  padding: auto;
-  margin: -8px;
-    width: 100vw;                      /* Full width */
-    overflow: hidden;  
-    overflow-y: hidden; /* Prevents vertical scroll on body */
-    /* Prevents any overflow */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;                  /* Prevents overflow */
+    padding: 0;
+    width: 100%;
+}
+
+app-navbar {
+    width: 100%;                      /* Navbar takes full width */
+}
+
+router-outlet {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;                   /* Padding inside router outlet */
 }

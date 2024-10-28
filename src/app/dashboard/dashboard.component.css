@@ -118,12 +118,12 @@ p {
   font-size: 18px;
   display: flex;
   justify-content: space-between;
-  gap: 70px;
+  gap: 0;
 }
 
 .skills-category {
   color:#b9b9c5 ;
-  flex: 1;
+
 }
 
 .stars {

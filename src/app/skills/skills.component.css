@@ -1,5 +1,5 @@
 .skills-container {
-    display: flex;
+  width: 500px;
     gap: 50px;
     padding: 30px;
     padding-top: 40px;
@@ -10,19 +10,21 @@
   .skills-category {
     flex: 1;
     padding: 10px;
-    background-color: #f3f4f6;
+    background-color: #05121d;
     border-radius: 8px;
     margin-top: 65px;
   }
   
   .skills-category h2 {
     margin-bottom: 10px;
-    color: #1f2937;
+    color: whitesmoke;
   }
   
   ul {
     list-style: none;
     padding: 0;
+    color: #b9b9c5;
+
   }
   
   .stars {

@@ -116,13 +116,15 @@ p {
 .skills-container {
   color:#f0e6e6;;
   font-size: 18px;
+  align-self: center;
   display: flex;
-  justify-content: space-between;
-  gap: 0;
+  margin: auto; 
+  gap: 5px;
 }
 
 .skills-category {
   color:#b9b9c5 ;
+  margin: auto;
 
 }
 

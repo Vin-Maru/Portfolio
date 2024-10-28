@@ -1,0 +1,35 @@
+<nav [ngStyle]="navbarStyle">
+  <div class="navbar-header">
+    <ul *ngIf="isMenuVisible || !isMobile" class="nav-links">
+      <li>
+        <a routerLink="/" (click)="closeMenu()">
+          <fa-icon [icon]="faInfoCircle" class="icon-spacing"></fa-icon>About Me
+        </a>
+      </li>
+      <li>
+        <a routerLink="/skills" (click)="closeMenu()">
+          <fa-icon [icon]="faTools" class="icon-spacing"></fa-icon>Skills
+        </a>
+      </li>
+      
+      <li>
+        <a routerLink="/experience" (click)="closeMenu()">
+          <fa-icon [icon]="faBriefcase" class="icon-spacing"></fa-icon>Experience
+        </a>
+      </li>
+      <li>
+        <a routerLink="/projects" (click)="closeMenu()">
+          <fa-icon [icon]="faProjectDiagram" class="icon-spacing"></fa-icon>Projects
+        </a>
+      </li>
+      <li>
+        <a routerLink="/contact" (click)="closeMenu()">
+          <fa-icon [icon]="faEnvelope" class="icon-spacing"></fa-icon>Message
+        </a>
+      </li>
+    </ul>
+    <button *ngIf="isMobile" (click)="toggleMenu()" class="toggle-button">
+      <fa-icon [icon]="isMenuVisible ? faTimes : faBars"></fa-icon>
+    </button>
+  </div>
+</nav>

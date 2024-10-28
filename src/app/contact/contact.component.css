@@ -1,0 +1,49 @@
+.contact-section {
+    text-align: center;
+    padding-top: 30px;
+    margin: 50px auto; /* Center horizontally */
+    width: 400px; /* Reduce the width */
+    background-color: transparent;
+    border-radius: 8px;
+   
+    color: whitesmoke;
+    box-shadow: 0 4px 8px rgba(133, 6, 105, 0.1); /* Optional shadow for a nicer look */
+    padding: 20px; /* Adjust padding */
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+   
+  }
+  
+  label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: whitesmoke
+  }
+  
+  input, textarea {
+    margin-top: 5px;
+    padding: 10px;
+    border: 1px solid #0eb69a;
+    border-radius: 4px;
+    width: 100%; /* Full width within the container */
+    box-sizing: border-box; /* Prevent padding from affecting width */
+  }
+  
+  button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #222037;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+  }
+  

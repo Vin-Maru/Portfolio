@@ -1,0 +1,31 @@
+/* Ensure no margins on HTML and body */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.main {
+    background-color: rgb(7, 7, 34); /* Main background color */
+    min-height: 100vh;               /* Ensure full viewport height */
+    display: flex;
+    flex-direction: column;
+    margin: -8px;
+}
+
+.home-content {
+    background-color: rgb(18, 26, 44); /* Content background color */
+    flex: 1;                           /* Expand to fill remaining space */
+    width: 100%;                       /* Full width without overflow */
+    box-sizing: border-box;
+    margin: -8px;            /* Include padding/border in dimensions */
+}
+
+/* Optional: Ensure all other elements have no margin */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;            /* Prevent overflow issues */
+}

@@ -1,0 +1,144 @@
+<div class="dashboard">
+  <img src="assets/LOGO.jpg" />
+  <div class="about-me">
+    <h3>Hi, My name is</h3>
+    <h1> Vincent Kiprotich Maru</h1>
+    <p>
+      I am a Computer Science graduate with a strong focus on both frontend and backend web development. 
+      As a skilled frontend developer, I have extensive experience working with Angular, React, JavaScript, 
+      CSS, and various other frontend technologies to create responsive, user-friendly interfaces. 
+      Additionally, I bring backend expertise in PHP and Node.js, contributing to the full-stack development of web applications. 
+      With a solid foundation in networking and IT systems, I specialize in network configuration and maintenance.
+    </p>
+   <!-- dashboard.component.html -->
+<div class="contact-resume">
+  <a routerLink="/contact">
+    <button class="contact-button">Get in Touch</button>
+  </a>
+  <div class="resume-download">
+    <a href="https://drive.google.com/file/d/1CeEFBxas5cfZE2IkH24voSnAbBUbOXdX/view?usp=drive_link" target="_blank">
+      Download My Resume
+    </a>
+  </div>
+</div>
+
+
+
+  <div class="about-me-details">
+    <h1>About Me <hr class="divider" /></h1>
+     <!-- Horizontal line -->
+    <p>
+      I possess a BSc from Kibabii University and completed my high school education with a strong focus on technology. 
+      I have developed a keen interest in web development and networking, which has shaped my career ambitions 
+      towards becoming a proficient professional in these fields. My journey has fueled my passion for learning 
+      and embracing new challenges in the tech industry.
+    </p>
+  </div>
+  </div>
+  <div class="skills-section">
+    <!-- About Me Section Header -->
+    <h1>Skills <hr class="divider" /></h1>
+  
+    <div class="skills-container">
+      <!-- Web Development Skills Column -->
+      <div class="skills-category">
+        <h2>Web Development Skills</h2>
+        <ul>
+          <li>HTML <span class="stars">★★★★★</span></li>
+          <li>CSS <span class="stars">★★★★★</span></li>
+          <li>JavaScript <span class="stars">★★★★★</span></li>
+          <li>Angular <span class="stars">★★★★☆</span></li>
+          <li>React <span class="stars">★★★★☆</span></li>
+          <li>Tailwind <span class="stars">★★★☆☆</span></li>
+          <li>Node.js <span class="stars">★★★☆☆</span></li>
+          <li>PHP <span class="stars">★★★★★</span></li>
+          <li>MySQL, SQL <span class="stars">★★★★☆</span></li>
+        </ul>
+      </div>
+  
+      <!-- Networking & Backend Skills Column -->
+      <div class="skills-category">
+        <h2>Networking</h2>
+        <ul>
+          <li>IP Addressing & Subnetting <span class="stars">★★★★☆</span></li>
+          <li>DNS, DHCP, VLAN <span class="stars">★★★★☆</span></li>
+          <li>Network Troubleshooting <span class="stars">★★★★☆</span></li>
+          <li>Firewalls & VPN Setup <span class="stars">★★★☆☆</span></li>
+         
+          <li>RESTful APIs <span class="stars">★★★☆☆</span></li>
+          <li>Cyber Security Basics <span class="stars">★★★☆☆</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="experience-section">
+    <h1>Experience <span class="divider"></span></h1>
+    
+    <div class="experience">
+      <div class="experience-item">
+        <span (click)="toggleDetails('eclectics')" class="experience-title">Eclectics International Limited (Software Company)</span>
+        <div *ngIf="isEclecticsVisible" class="experience-details">
+          <p>August 2024 - Present</p>
+          <ul>
+            <li>Designed and developed responsive user interfaces using React, JavaScript, CSS, and HTML.</li>
+            <li>Collaborated with backend teams to integrate APIs and ensure data flow.</li>
+            <li>Optimized applications for performance and compatibility.</li>
+            <li>Implemented scalable component-based architecture in React.</li>
+            <li>Debugged and enhanced frontend components.</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="experience-item">
+        <span (click)="toggleDetails('ca')" class="experience-title">Communications Authority of Kenya (Intern)</span>
+        <div *ngIf="isCaVisible" class="experience-details">
+          <p>January 2024 - April 2024</p>
+          <ul>
+            <li>Assisted in software development, testing, and debugging.</li>
+            <li>Conducted research on emerging technologies.</li>
+            <li>Provided technical support to users.</li>
+            <li>Assisted in database management and maintenance.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-section">
+    <h1>Get In Touch <span class="divider"></span></h1>
+    
+    <p>
+      Whether you have a question or just want to say hi, feel free to drop a message, and I'll get back to you!
+    </p>
+    
+   <a routerLink="/contact"> <button class="contact-button">Say Hello</button>
+   </a> 
+  </div>
+  
+  <div class="contact-info">
+    <h3>Contact Information</h3>
+    <ul>
+      <li><fa-icon [icon]="faPhone"></fa-icon> +254 705980006</li>
+      <li><fa-icon [icon]="faEnvelope"></fa-icon> vincentkiprotich76gmail.com</li>
+      <li><fa-icon [icon]="faMapMarkerAlt"></fa-icon> 1168-30100 Eldoret, Kenya</li>
+      <li>
+        <a href="https://github.com/Vin-Maru?tab=repositories" target="_blank">
+          <fa-icon [icon]="faMap"></fa-icon> GitHub
+        </a>
+      </li>
+      <li>
+        <a href="https://yourwebsite.com" target="_blank">
+          <fa-icon [icon]="faGlobe"></fa-icon> Website
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/vincentkiprotich/" target="_blank">
+          <fa-icon [icon]="faLinkedin"></fa-icon> LinkedIn
+        </a>
+      </li>
+    </ul>
+  </div>
+  
+  
+  
+  </div>

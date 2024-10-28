@@ -1,0 +1,76 @@
+nav {
+  border-radius: 20px;
+  margin-top: -5px;
+  align-items: end;
+  display: flex;
+ flex-direction: column;
+  align-items: right; /* Align items vertically in the center */
+  position: absolute;
+  padding:40px; /* Padding applied on all sides */
+}
+img{
+  width: 60px;
+  height: 60px;
+  border-radius: 20px;
+  align-self: left;
+}
+
+.navbar-header {
+  display: flex;
+  align-items:flex-end;
+
+}
+
+.toggle-button {
+  background: none;
+  border: none;
+  padding: 10px;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 40px;
+  margin-left: auto; /* Push the toggle button to the right */
+}
+
+.nav-links {
+  display: flex;
+  gap: 60px;
+  font-size: 18px;
+  list-style-type: none;
+  margin: -5px;
+  padding-right: 40px; /* Remove default padding */
+}
+.nav-links li :hover {
+color: aqua;
+}
+.nav-links li {
+
+  margin-right:auto; /* Adjust spacing between links */
+}
+.icon-spacing {
+  margin-right: 8px; /* Adjust the value as needed */
+}
+
+.nav-links a {
+  
+  color: white;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    padding: 10px;
+    border-radius: 10px;
+    flex-direction: column; /* Stack links vertically on small screens */
+    display: flex; /* Hide by default */
+    position: absolute; /* Position the dropdown */
+    right: 0; /* Align the dropdown to the right */
+    top: 100%; /* Position below the navbar */
+    background-color: #22203780;    width: auto; /* Make the dropdown full width */
+    z-index: 1000; /* Ensure dropdown appears above other content */
+  }
+
+  .nav-links.ng-trigger {
+    display: flex; /* Show when toggled */
+  }
+}

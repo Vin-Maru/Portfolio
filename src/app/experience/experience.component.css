@@ -1,0 +1,90 @@
+.experience-section {
+    display: flex;
+    gap: 50px;
+    padding: 30px;
+    padding-top: 60px;
+    margin-top: 30px; 
+   
+  }
+  h1{
+    color: #c2cef5;
+  font-size: 36px;
+  }
+  h3{
+    color: whitesmoke;
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+  p{
+    font-size: 18px; /* Paragraph text size */
+    color: #b9b9c5 ;
+
+  }
+  .experience {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .experience-item {
+    border-left: 4px solid #222037;
+    padding-left: 20px;
+  }
+  
+  .contact-section {
+    text-align: center;
+    width: 100%;
+    margin-top: 120px;
+    padding: 40px;
+    background-color: transparent;
+    border-radius: 8px;
+    
+  
+  }
+  
+  .contact-section h1 {
+    color: whitesmoke;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .contact-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  .contact-info {
+    text-align: center;
+    padding-top:  20px;
+    background-color: transparent;
+    bottom: 0;
+    width: 100%;
+    font-size: 18px;
+   
+    
+  }
+  
+  .contact-info h3 {
+    color: whitesmoke;
+    font-size: 35px;
+    margin-bottom: 18px;
+  }
+  
+  .contact-info ul {
+    color: #b9b9c5 ;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .contact-info ul li {
+    margin: 20px 0;
+    font-size: 16px;
+  }
+  
+  .contact-info ul li fa-icon {
+    margin-right: 15px; /* Space between icon and text */
+  }
+  .contact-info a{
+    color:#007bff;;
+  }
+  

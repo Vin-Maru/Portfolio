@@ -1,0 +1,242 @@
+/* Ensure the dashboard takes the full viewport height and width */
+/* Ensure the dashboard takes the full viewport height and width */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.dashboard {
+  background-color: rgb(18, 26, 44);
+  display: flex;
+  height: 100%; /* Corrected from 100uv to 100vh */
+  flex-direction: column; /* Ensure children are stacked vertically */
+  padding: 20px 40px; /* Adjust padding for smaller space */
+  box-sizing: border-box; /* Include padding in width/height */
+  margin-top: 20px; /* Optional: Adjust as necessary */
+  /* Consider adding a responsive max-width */
+  max-width: 1200px; /* Set a max width if necessary */
+  margin: 30px auto; /* Center horizontally if using max-width */
+}
+
+
+/* dashboard.component.css */
+.contact-resume {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  gap: 80px; /* Space between button and link */
+}
+
+.contact-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-button:hover {
+  background-color: #0056b3;
+}
+
+.resume-download a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.resume-download a:hover {
+  color: #0056b3;
+}
+
+
+
+.about-me {
+ margin-top: 80px;
+  max-width: 800px; /* Limit the width for better readability */
+}
+h3{
+  color: #0ab3b3;
+}
+h1 {
+  color: #c2cef5;
+  font-size: 36px;
+  margin: 10px 0; /* Reduce top and bottom margins */
+}
+
+p {
+  font-size: 18px;
+  color: #b9b9c5;
+  line-height: 1.6;
+  margin: 5px 0; /* Reduce spacing between paragraphs */
+}
+.about-me-details {
+  margin-left: 60px;
+  padding-top: 90px;
+
+  max-width: 800px; /* Limit width for readability */
+  margin: 20px;
+  margin-left: 40px ;/* Center the content with space above and below */
+   /* Align text to the left */
+}
+
+.about-me-details h1 {
+  color: whitesmoke;
+  font-size: 36px; /* Title size */
+  margin: 0; /* Remove default margin */
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center align items */
+}
+
+.divider {
+  border: none;
+  flex-grow: 0.6; /* Allow the line to take available space */
+  height: 2px; /* Set height of the line */
+  background-color:#0ab3b3;; /* Color of the line */
+  margin-left: 20px; /* Space between the text and the line */
+}
+
+
+.about-me-details p {
+  font-size: 18px; /* Paragraph text size */
+  line-height: 1.6; /* Better line height for readability */
+  margin-bottom: 15px; /* Space below paragraphs */
+}
+.skills-section {
+  padding-top: 80px;
+  margin-left: 60px ;
+
+}
+
+.skills-section h1 {
+  display: flex;
+  align-items: center;
+  color: whitesmoke;
+}
+
+
+.skills-container {
+  color:#f0e6e6;;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  gap: 70px;
+}
+
+.skills-category {
+  color:#b9b9c5 ;
+  flex: 1;
+}
+
+.stars {
+  color: gold;
+  font-size: 14px;
+  margin-left: 5px;
+}
+.experience-section {
+  max-width: 800px;
+  margin-top:  80px;
+  margin-left: 100px;
+  color: #f0e6e6;
+}
+
+.experience-section h1 {
+  font-size: 28px;
+  color: whitesmoke;
+  display: flex;
+  align-items: center;
+}
+
+
+
+.experience-item {
+  margin-top: 20px;
+}
+
+.experience-details {
+  padding-left: 20px;
+  margin-top: 5px;
+}
+.experience-title:hover {
+  text-decoration: underline;
+}
+
+.experience p {
+  margin-top: 10px;
+  font-size: 16px;
+  line-height: 1.6;
+}
+.experience-title {
+  cursor: pointer;
+  color: #1daddd;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.contact-section {
+  text-align: center;
+  width: 100%;
+  margin-top: 120px;
+  padding: 40px;
+  background-color: transparent;
+  border-radius: 8px;
+
+}
+
+.contact-section h1 {
+  color: whitesmoke;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.contact-section p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.contact-info {
+  text-align: center;
+  padding-top:  20px;
+  background-color: transparent;
+  bottom: 0;
+  width: 100%;
+  font-size: 18px;
+ 
+  
+}
+
+.contact-info h3 {
+  color: whitesmoke;
+  font-size: 35px;
+  margin-bottom: 18px;
+}
+
+.contact-info ul {
+  color: #b9b9c5 ;
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info ul li {
+  margin: 20px 0;
+  font-size: 16px;
+}
+.contact-info a{
+  color:#007bff;;
+}
+.contact-info ul li fa-icon {
+  margin-right: 15px; /* Space between icon and text */
+}
+img{
+  width: 60px;
+  height: 60px;
+  border-radius: 20px;
+  align-self: left;
+}

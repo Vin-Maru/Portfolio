@@ -56,12 +56,23 @@ export class NavbarComponent {
 
   // Toggle menu on click
   toggleMenu() {
-    this.isMenuVisible = !this.isMenuVisible;
+    this.isMenuVisible = true;
   }
+  closeMenuIfNotClicked(event: MouseEvent) {
+    const element = event.relatedTarget as HTMLElement;
+    const navbar = document.querySelector('nav');
 
+    // Ensure the mouse has left the entire navbar (toggle + menu)
+    if (navbar && !navbar.contains(element)) {
+      this.isMenuVisible = false;
+    }
+  }
   // Close the menu
   closeMenu() {
     this.isMenuVisible = false;
+  }
+  openMenu(){
+    this.isMenuVisible= true;
   }
 
   // Adjust navbar style on scroll

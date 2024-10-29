@@ -1,6 +1,6 @@
 <nav [ngStyle]="navbarStyle">
-  <div class="navbar-header">
-    <ul *ngIf="isMenuVisible || !isMobile" class="nav-links">
+  <div class="navbar-header" (mouseover)="openMenu ()">
+    <ul *ngIf="isMenuVisible || !isMobile" class="nav-links" (mouseleave)="closeMenuIfNotClicked($event)">
       <li>
         <a routerLink="/" (click)="closeMenu()">
           <fa-icon [icon]="faInfoCircle" class="icon-spacing"></fa-icon>About

@@ -55,8 +55,9 @@ export class NavbarComponent {
   }
 
   // Toggle menu on click
+ 
   toggleMenu() {
-    this.isMenuVisible = true;
+    this.isMenuVisible = !this.isMenuVisible;
   }
   closeMenuIfNotClicked(event: MouseEvent) {
     const element = event.relatedTarget as HTMLElement;
@@ -81,19 +82,18 @@ export class NavbarComponent {
       ? {
           position: 'fixed',
           top: '-0.2', // Reduced top value for closer positioning
-          width: '90%',
+          width: '100%',
           
           margins:'40px',
-          backgroundColor: '#22203780',
           boxShadow: '0 4px 8px rgba(0, 0, 0, 0.3)',
           height: 'auto',
-          padding: '20px',
+        
           
-          transition: 'all 0.9s ease-in-out' // Added transition for smooth appearance
+          transition: 'all 0.7s ease-in-out' // Added transition for smooth appearance
         }
       : {
           position: 'relative',
-          transition: 'all 0.9s ease-in-out'
+          transition: 'all 0.7s ease-in-out'
         };
   }
   

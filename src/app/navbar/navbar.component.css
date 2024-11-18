@@ -1,73 +1,107 @@
-nav {
-  border-radius: 5px;
-  margin:0.5%;
-  background-color: rgb(7, 7, 34); /* Main background color */
-
-  align-items: end;
-  display: flex;
- flex-direction: column;
-  align-items: right; /* Align items vertically in the center */
-  position: absolute;
-  padding:20px; /* Padding applied on all sides */
+.nav {
+ 
+  color: antiquewhite;
+  border-radius: 1px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #081a20; /* Set your light blue background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); /* Optional shadow effect */
 }
 
+img {
+  width: 60px;
+  height: 60px;
+  border-radius: 20px;
+  object-fit: cover; /* Ensure the logo image is correctly cropped */
+}
 
 .navbar-header {
   display: flex;
-  align-items:flex-end;
-
+ 
+  align-items: center; /* Align navigation links vertically */
+  justify-content: space-between; /* Ensure the logo and links are spaced correctly */
+  width: 100%; /* Use full width for header */
 }
 
 .toggle-button {
   background: none;
   border: none;
-  padding: 10px;
-  color: white;
+  padding: auto;
+  color: #00ffff;
   font-size: 24px;
   cursor: pointer;
-  margin-right: 60px;
-  margin-left: auto; /* Push the toggle button to the right */
+  display: none; /* Hide on large screens */
 }
 
 .nav-links {
-  display: flex;
-  gap: 60px;
+  display: flex; /* Align links in a row on large screens */
   font-size: 18px;
   list-style-type: none;
-  margin: -5px;
-  padding-right: 40px; /* Remove default padding */
+ align-items: center;
+  gap: auto;
+  gap: 60px;
+  flex-grow: 1; /* Allow the links to take up available space */
+  justify-content: flex-end; /* Align links to the right */
 }
-.nav-links li :hover {
-color: aqua;
-}
-.nav-links li {
 
-  margin-right:auto; /* Adjust spacing between links */
+.nav-links li {
+  margin: 0; /* Remove any extra margin from list items */
 }
+.nav-links li a{
+  padding: 20px;
+}
+.nav-links li a:hover {
+  color: #00ffff; /* Add hover effect for links */
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
 .icon-spacing {
   margin-right: 8px; /* Adjust the value as needed */
 }
 
-.nav-links a {
-  
-  color: white;
-  text-decoration: none;
-}
-
+/* Mobile responsive styles */
 @media (max-width: 768px) {
-  .nav-links {
-    padding: 10px;
-    border-radius: 10px;
-    flex-direction: column; /* Stack links vertically on small screens */
-    display: flex; /* Hide by default */
-    position: absolute; /* Position the dropdown */
-    margin: 10px; /* Align the dropdown to the right */
-    top: 100%; /* Position below the navbar */
-    background-color: #22203780;    width: auto; /* Make the dropdown full width */
-    z-index: 1000; /* Ensure dropdown appears above other content */
+  nav {
+    padding: none;
+   
   }
 
-  .nav-links.ng-trigger {
-    display: flex; /* Show when toggled */
+  .toggle-button {
+
+    display: block; /* Show the toggle button on mobile */
+    margin-left: auto; /* Position the button to the right */
+  }
+
+  .nav-links {
+    display: none; /* Initially hide the links */
+    flex-direction: column; /* Stack links vertically on mobile */
+    width: auto; /* Full width for the dropdown menu */
+    position: absolute;
+    float: right;
+    top: 100%;
+    left: 0;
+    margin-top: 5px;
+    margin-left: 70%;
+    background-color: rgba(34, 32, 55, 0.3);
+    /* Semi-transparent background for dropdown */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Add some shadow for better visibility */
+    z-index: 1000; /* Ensure dropdown is on top */
+  }
+.nav-links a{
+  padding: 20px;
+}
+  .nav-links.show {
+    display: flex; /* Show the links when the menu is toggled */
+  }
+  .nav-links li:last-child {
+    margin-bottom: 0; /* Remove margin for the last link */
   }
 }

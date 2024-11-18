@@ -248,9 +248,21 @@ ul {
 .contact-info ul li fa-icon {
   margin-right: 15px; /* Space between icon and text */
 }
-img{
-  width: 60px;
-  height: 60px;
-  border-radius: 20px;
-  align-self: left;
+
+.about-me, .skills-section, .experience-section, .contact-section {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.about-me.visible, .skills-section.visible, .experience-section.visible, .contact-section.visible {
+  opacity: 1;
+}
+
+.experience-title {
+  cursor: pointer;
+}
+
+.experience-details {
+  padding-left: 20px;
+  list-style: disc;
 }

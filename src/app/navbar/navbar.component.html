@@ -1,35 +1,42 @@
 <nav [ngStyle]="navbarStyle">
-  <div class="navbar-header" (mouseover)="openMenu ()">
-    <ul *ngIf="isMenuVisible || !isMobile" class="nav-links" (mouseleave)="closeMenuIfNotClicked($event)">
-      <li>
-        <a routerLink="/" (click)="closeMenu()">
-          <fa-icon [icon]="faInfoCircle" class="icon-spacing"></fa-icon>About
-        </a>
-      </li>
-      <li>
-        <a routerLink="/skills" (click)="closeMenu()">
-          <fa-icon [icon]="faTools" class="icon-spacing"></fa-icon>Skills
-        </a>
-      </li>
-      
-      <li>
-        <a routerLink="/experience" (click)="closeMenu()">
-          <fa-icon [icon]="faBriefcase" class="icon-spacing"></fa-icon>Experience
-        </a>
-      </li>
-      <li>
-        <a routerLink="/projects" (click)="closeMenu()">
-          <fa-icon [icon]="faProjectDiagram" class="icon-spacing"></fa-icon>Projects
-        </a>
-      </li>
-      <li>
-        <a routerLink="/contact" (click)="closeMenu()">
-          <fa-icon [icon]="faEnvelope" class="icon-spacing"></fa-icon>Message
-        </a>
-      </li>
-    </ul>
-    <button *ngIf="isMobile" (click)="toggleMenu()" class="toggle-button">
-      <fa-icon [icon]="isMenuVisible ? faTimes : faBars"></fa-icon>
-    </button>
+  <div class="nav">
+    
+    
+    <div class="navbar-header">
+      <div class="navbar-logo">
+        <img src="assets/LOGO.jpg" alt="Logo" />
+      </div>
+      <ul class="nav-links" [ngClass]="{'show': isMenuVisible}">
+        <li>
+          <a routerLink="/" (click)="closeMenu()">
+            <fa-icon [icon]="faInfoCircle" class="icon-spacing"></fa-icon>About
+          </a>
+        </li>
+        <li>
+          <a routerLink="/skills" (click)="closeMenu()">
+            <fa-icon [icon]="faTools" class="icon-spacing"></fa-icon>Skills
+          </a>
+        </li>
+        <li>
+          <a routerLink="/experience" (click)="closeMenu()">
+            <fa-icon [icon]="faBriefcase" class="icon-spacing"></fa-icon>Experience
+          </a>
+        </li>
+        <li>
+          <a routerLink="/projects" (click)="closeMenu()">
+            <fa-icon [icon]="faProjectDiagram" class="icon-spacing"></fa-icon>Projects
+          </a>
+        </li>
+        <li>
+          <a routerLink="/contact" (click)="closeMenu()">
+            <fa-icon [icon]="faEnvelope" class="icon-spacing"></fa-icon>Message
+          </a>
+        </li>
+      </ul>
+
+      <button *ngIf="isMobile" (click)="toggleMenu()" class="toggle-button">
+        <fa-icon [icon]="isMenuVisible ? faTimes : faBars"></fa-icon>
+      </button>
+    </div>
   </div>
 </nav>

@@ -65,41 +65,48 @@ img {
   margin-right: 8px; /* Adjust the value as needed */
 }
 
-/* Mobile responsive styles */
 @media (max-width: 768px) {
   nav {
-    padding: none;
-   
+    padding: 0; /* Retain compact padding for the navbar */
   }
 
   .toggle-button {
-
-    display: block; /* Show the toggle button on mobile */
+    display: block; /* Show toggle button on small screens */
+    margin-left: auto; /* Align toggle to the right */
   }
 
   .nav-links {
     display: none; /* Initially hide the links */
-    flex-direction: column; /* Stack links vertically on mobile */
-    width: auto; /* Full width for the dropdown menu */
-    position: absolute;
-    float: right;
-    top: 100%;
-    left: 0;
-
+    position: absolute; /* Place outside the navbar */
+    top: 100%; /* Directly below the toggle button */
+    right: 10px; /* Align to the right side of the screen */
+    flex-direction: column; /* Stack links vertically */
+    gap: 5px; /* Minimal gap between links */
     background-color: rgba(34, 32, 55, 0.3);
-    /* Semi-transparent background for dropdown */
-    
-    border-radius: 5px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Add some shadow for better visibility */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Add padding for spacing */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Add shadow for dropdown */
     z-index: 1000; /* Ensure dropdown is on top */
+    text-align: right; /* Align text in links to the right */
   }
-.nav-links a{
-  padding: auto;
-}
+
   .nav-links.show {
-    display: flex; /* Show the links when the menu is toggled */
+    display: flex; /* Show the links when toggled */
   }
-  .nav-links li:last-child {
-    margin-bottom: 0; /* Remove margin for the last link */
+
+  .nav-links li {
+    margin: 0; /* Remove default margin */
+  }
+
+  .nav-links li a {
+    padding: 8px 12px; /* Adjust padding for compact spacing */
+    text-align: right; /* Align link text to the right */
+    color: white; /* Keep link color white */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Ensure each link takes full width */
+  }
+
+  .nav-links li a:hover {
+    color: #00ffff; /* Add hover effect for feedback */
   }
 }

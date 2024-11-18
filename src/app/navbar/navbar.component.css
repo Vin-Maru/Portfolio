@@ -87,16 +87,16 @@ img {
     top: 100%;
     left: 0;
     margin-top: 5px;
-    margin-left: 70%;
+    margin-left: 65%;
     background-color: rgba(34, 32, 55, 0.3);
     /* Semi-transparent background for dropdown */
-    padding: 10px;
+    
     border-radius: 5px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Add some shadow for better visibility */
     z-index: 1000; /* Ensure dropdown is on top */
   }
 .nav-links a{
-  padding: 20px;
+  padding: auto;
 }
   .nav-links.show {
     display: flex; /* Show the links when the menu is toggled */

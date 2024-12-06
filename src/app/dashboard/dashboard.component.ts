@@ -1,10 +1,10 @@
-import { Component, HostListener, OnInit, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, HostListener, OnInit, Inject, PLATFORM_ID, AfterViewInit,ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faPhone, faEnvelope, faMapMarkerAlt, faMap, faGlobe } from '@fortawesome/free-solid-svg-icons';
 import { RouterModule } from '@angular/router';
-import { isPlatformBrowser } from '@angular/common'; // Importing the necessary function
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-dashboard',
@@ -13,52 +13,49 @@ import { isPlatformBrowser } from '@angular/common'; // Importing the necessary 
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css'],
 })
-export class DashboardComponent implements OnInit {
+export class DashboardComponent implements AfterViewInit {
   faPhone = faPhone;
   faEnvelope = faEnvelope;
   faMapMarkerAlt = faMapMarkerAlt;
   faMap = faMap;
   faGlobe = faGlobe;
   faLinkedin = faLinkedin;
-
+  showElement = false;
   isEclecticsVisible = true;
   isCaVisible = true;
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
-  ngOnInit(): void {
-    // Check visibility when the component loads
+  private containers: NodeListOf<Element> | undefined;
+
+  constructor(
+    private elRef: ElementRef,
+    @Inject(PLATFORM_ID) private platformId: Object // To detect the rendering platform
+  ) {}
+
+  ngAfterViewInit(): void {
     if (isPlatformBrowser(this.platformId)) {
-      this.checkVisibility();
+      // Select all containers with the class "scroll-container"
+      this.containers = this.elRef.nativeElement.querySelectorAll('.scroll-container');
+      this.checkVisibility(); // Initial check for containers already in view
     }
   }
 
   @HostListener('window:scroll', ['$event'])
-  onScroll(event: Event): void {
-    // Only run checkVisibility if we are in the browser
+  onWindowScroll(): void {
     if (isPlatformBrowser(this.platformId)) {
-      this.checkVisibility();
+      this.checkVisibility(); // Trigger visibility check on scroll
     }
   }
 
-  checkVisibility(): void {
-    const sections = document.querySelectorAll('.about-me, .skills-section, .experience-section, .contact-section');
+  private checkVisibility(): void {
+    const windowHeight = window.innerHeight;
 
-    sections.forEach((section) => {
-      const rect = section.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom >= 0) {
-        section.classList.add('visible');
-      } else {
-        section.classList.remove('visible');
+    this.containers?.forEach((container) => {
+      const rect = container.getBoundingClientRect();
+      if (rect.top <= windowHeight - 100) {
+        // Add 'visible' class if the container is in view
+        container.classList.add('visible');
       }
     });
-  }
-
-  toggleDetails(company: string) {
-    if (company === 'eclectics') {
-      this.isEclecticsVisible = !this.isEclecticsVisible;
-    } else if (company === 'ca') {
-      this.isCaVisible = !this.isCaVisible;
-    }
   }
 }

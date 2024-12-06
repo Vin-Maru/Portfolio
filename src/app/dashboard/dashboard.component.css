@@ -4,6 +4,7 @@
 .dashboard {
   background-color: rgb(18, 26, 44);
   display: flex;
+  overflow: visible; 
   height: 100%; /* Corrected from 100uv to 100vh */
   flex-direction: column; /* Ensure children are stacked vertically */
   padding: 20px 40px; /* Adjust padding for smaller space */
@@ -152,12 +153,6 @@ ul {
   }
 }
 
-.experience-section {
-  max-width: 800px;
-  margin-top:  40px;
-  margin-left: 100px;
-  color: #f0e6e6;
-}
 
 .experience-section h1 {
   font-size: 28px;
@@ -180,9 +175,9 @@ ul {
   text-decoration: underline;
 }
 
-.experience p {
+.experience li {
   margin-top: 10px;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.6;
 }
 .experience-title {
@@ -195,12 +190,13 @@ ul {
 }
 
 .contact-section {
-  text-align: center;
+  align-items: center;
   width: 100%;
-  margin-top: 80px;
-  padding: 40px;
-  background-color: transparent;
+  margin-top:auto;
+  margin-left: auto;
+  padding: auto;
   border-radius: 8px;
+  color: red;
 
 }
 
@@ -216,7 +212,7 @@ ul {
   margin-bottom: 20px;
 }
 .contact-info {
-  text-align: center;
+ align-items: center;
   padding-top:  20px;
   background-color: transparent;
   bottom: 0;
@@ -224,6 +220,19 @@ ul {
   font-size: 18px;
  
   
+}
+.scroll-container {
+  padding: 20px;
+  z-index: 10;
+  position: relative;
+  transform: translateX(-100%); /* Start off-screen */
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  opacity: 0; /* Start invisible */
+}
+
+.scroll-container.visible {
+  transform: translateX(0); /* Slide into view */
+  opacity: 1; /* Become visible */
 }
 
 .contact-info h3 {
@@ -265,4 +274,9 @@ ul {
 .experience-details {
   padding-left: 20px;
   list-style: disc;
+}
+
+
+.side-container.slide-in {
+  left: 20px; /* Position when it slides in */
 }
